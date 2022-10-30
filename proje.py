@@ -1,3 +1,6 @@
+from audioop import reverse
+
+
 arr = [[1,'a',['cat'],2],[[[3]],'dog'],4,5,6,7]
 
 def duzlestir(arr):
@@ -17,4 +20,11 @@ def duzlestir(arr):
             liste.append(item)
     return liste
 
-print(duzlestir(arr))
+#print(duzlestir(arr))
+
+def tersle(arr):
+    arr = list(reversed(arr))
+    for item in arr:
+        if(type(item) is list):
+            reversed(item)
+    return arr
